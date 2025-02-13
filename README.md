@@ -3,4 +3,3 @@
 
 📌 *Note: Currently optimized for larger screens; not responsive for mobile devices.*  
 
-Let me know if you need further refinements! 🚀
