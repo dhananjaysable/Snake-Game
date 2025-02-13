@@ -46,7 +46,8 @@ body {
 }
 
 .snake.head {
-    background-color: #45b393;
+    background-color: lightgreen;
+    border: 3px dotted teal;
     border-radius: 6px;
 }
 
