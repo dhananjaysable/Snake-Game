@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#game-board {
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    height: 400px;
+    border: 3px solid #30475e;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    right: 115px;
+}
+
+.snake {
+    width: 20px;
+    height: 20px;
+    background-color: #4ecca3;
+    position: absolute;
+    border-radius: 4px;
+    transition: all 0.1s;
+}
+
+.snake.head {
+    background-color: #45b393;
+    border-radius: 6px;
+}
+
+.food {
+    width: 20px;
+    height: 20px;
+    background-color: #ff6b6b;
+    position: absolute;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score-container {
+    flex-direction: column;
+    display: flex;
+    gap: 30px;
+    width: 200px;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    left: 110px;
+    top: 110px;
+}
+
+.score-box {
+    text-align: center;
+}
+
+.score-label {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.score-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#speed-indicator {
+    font-size: 16px;
+    color: #4ecca3;
+    margin-top: 10px;
+}
+
+#start-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #4ecca3;
+    box-shadow: 0 0 20px rgba(78, 204, 163, 0.3);
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 15px;
+    min-width: 280px;
+    border: 2px solid #ff6b6b;
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+}
+
+#game-over h2 {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.score-text {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #4ecca3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #45b393;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 204, 163, 0.4);
+}
+
+.bottom-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.level-indicator {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 35px; */
+}
